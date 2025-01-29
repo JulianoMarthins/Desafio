@@ -2,7 +2,10 @@ package com.devSuperior.Desafio.entities;
 
 import org.springframework.stereotype.Service;
 
-// Anotação para definir que esta classe será usada como serviço.
+import java.text.NumberFormat;
+import java.util.Locale;
+
+// Anotação "@Service" defini esta classe como serviço na aplicação
 @Service
 public class Order {
 
@@ -13,18 +16,17 @@ public class Order {
 
 
     // Construtores da classe
-    public Order(){
+    public Order() {
 
     }
 
-    public Order(Integer code, Double basic, Double discount){
+    public Order(Integer code, Double basic, Double discount) {
         this.code = code;
         this.basic = basic;
         this.discount = discount;
     }
 
     // region Getters & Setters
-
 
     public Integer getCode() {
         return code;
